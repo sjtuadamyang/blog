@@ -6,7 +6,7 @@ from easy_thumbnails import signal_handlers
 class Post(models.Model):
 	title = models.CharField(max_length=30)
 	date = models.DateField()
-	image = models.ImageField(upload_to="blog/static/blog/media/images/%Y/%m/%d", blank=True)
+	image = models.ImageField(upload_to="blog/images/%Y/%m/%d", blank=True)
 	content = models.TextField()
 	preview = models.TextField()
 

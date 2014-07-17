@@ -91,18 +91,24 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
 
+# Media asset configuration
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Static asset configuration
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-
-# Media asset configuration
-MEDIA_ROOT = BASE_DIR
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    MEDIA_ROOT,
+)
 
 # Thumbnail configuration
+THUMBNAIL_DEBUG = True
 THUMBNAIL_ALIASES = {
-    'blog.Post.image': {
+    'blog.Post': {
         'standard': {
-            'size': (290, 212)
+            'size': (290, 212),
+            'crop': True,
         }
     }
 }
