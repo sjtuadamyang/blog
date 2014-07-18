@@ -33,16 +33,16 @@
 	<![endif]-->
 
 	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href={% static "blog/css/bootstrap.css" %} rel="stylesheet">
 
 	<!-- Theme Styles CSS-->
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css" >
-	<link rel="stylesheet" href="css/flexslider.css"/>
-	<link rel="stylesheet" href="css/nivo-lightbox.css" />
-	<link rel="stylesheet" href="images/themes/default/default.css" />
-	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
-	<link rel="stylesheet" href="css/animate.css" />
+	<link href={% static "blog/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+	<link rel="stylesheet" href={% static "blog/css/style.css" %} />
+	<link rel="stylesheet" href={% static "blog/css/flexslider.css" %} />
+	<link rel="stylesheet" href={% static "blog/css/nivo-lightbox.css" %} />
+	<link rel="stylesheet" href={% static "blog/images/themes/default/default.css" %} />
+	<link rel="stylesheet" href={% static "blog/css/jquery.mCustomScrollbar.css" %} />
+	<link rel="stylesheet" href={% static "blog/css/animate.css" %} />
 
 	<!-- Owl Carousel Assets -->
 	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
@@ -54,7 +54,7 @@
 	<![endif]-->
 
 	<!-- Style Switch -->
-	<link rel="stylesheet" type="text/css" href="css/colors/yellow-black.css" title="yellow" media="screen" />
+	<link rel="stylesheet" type="text/css" href={% static "blog/css/colors/yellow-black.css" %} title="yellow" media="screen" />
 
 </head>
 <body>
@@ -64,15 +64,15 @@
 		<div class="row">
 			<div class="col-md-3 l-content">
 				<div class="profile-pic">
-					<div class="pic-bg"><img src="images/profile-avatar.png" class="img-responsive" alt=""/></div>
+					<div class="pic-bg"><img src={% static "blog/images/profile-avatar.png" %} class="img-responsive" alt=""/></div>
 				</div>
 				<nav>
 				<ul class="navigation">
-					<li><a href="./index.html#1">Profile <i class="fa fa-user"></i></a></li>
-					<li><a href="./index.html#2">Work <i class="fa fa-briefcase"></i></a></li>
-					<li><a href="./index.html#3">Resume <i class="fa fa-file-text"></i></a></li>
+					<li><a href=".">Profile <i class="fa fa-user"></i></a></li>
+					<li><a href=".">Work <i class="fa fa-briefcase"></i></a></li>
+					<li><a href=".">Resume <i class="fa fa-file-text"></i></a></li>
 					<li class="flex-active"><a href="./index.html#4">Blog <i class="fa fa-comment"></i></a></li>
-					<li><a href="./index.html#5">Contact <i class="fa fa-envelope"></i></a></li>
+					<li><a href=".">Contact <i class="fa fa-envelope"></i></a></li>
 				</ul>
 				</nav>
 			</div>
@@ -199,9 +199,9 @@
 
 <!-- JavaScript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/animations.js"></script>
+<script src={% static "blog/js/bootstrap.js" %}></script>
+<script src={% static "blog/js/jquery.mCustomScrollbar.concat.min.js" %}></script>
+<script src={% static "blog/js/animations.js" %}></script>
 <script>
 jQuery(document).ready(function($) {
 	$(window).load(function(){
