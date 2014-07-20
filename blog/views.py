@@ -8,6 +8,7 @@ def index(request):
 
 	template = loader.get_template('blog/index.html')
 	context = RequestContext(request, {'posts': posts})
+	
 	return HttpResponse(template.render(context))
 
 def article(request):
