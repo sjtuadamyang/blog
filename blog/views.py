@@ -17,3 +17,10 @@ def article(request):
 	context = RequestContext(request, {'image': post_0.image,
 									   'content': 'crap'})
 	return HttpResponse(template.render(context))
+
+def frame(request):
+	posts = models.Post.objects.all()
+
+	template = loader.get_template('blog/frame.html')
+	context = RequestContext(request, {'posts': posts})
+	return HttpResponse(template.render(context))
