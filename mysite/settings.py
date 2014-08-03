@@ -101,7 +101,7 @@ STATICFILES_DIRS = (
     MEDIA_ROOT,
 )
 
-# Thumbnail configuration
+# Easy-thumbnail configuration
 THUMBNAIL_DEBUG = True
 THUMBNAIL_ALIASES = {
     'blog.Post': {
