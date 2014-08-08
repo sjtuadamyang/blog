@@ -39,6 +39,7 @@ INSTALLED_APPS = (
 
     # third-party apps 
     'easy_thumbnails',
+    'south',
 
     # my apps
     'blog',
