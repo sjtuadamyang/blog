@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'yyi0u+61@57@qa3z@r3*^ykqnc!v(l&8z+9c1598*l!teu25+d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = FALSE
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -106,10 +106,11 @@ if not DEBUG:
     AWS_STORAGE_BUCKET_NAME = 'adamyang_personal_blog'
     STATICFILES_STORAGE = 's3utils.StaticRootS3BotoStorage'
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-    STATIC_URL = S3_URL
+    STATIC_URL = S3_URL + '/static/'
     AWS_ACCESS_KEY_ID = 'AKIAJ6YCKMCWNAWHS4ZA'
     AWS_SECRET_ACCESS_KEY = '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'
     DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
+    MEDIA_URL = S3_URL + '/media/'
 
 
 
