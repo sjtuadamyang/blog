@@ -105,7 +105,7 @@ STATIC_URL = '/static/'
 # Static asset configuration using S3 in production
 if not DEBUG:
     AWS_STORAGE_BUCKET_NAME = 'adamyang_personal_blog'
-    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = False  # Don't include auth in every url. This will fix the admin image url sandwish issue.
     STATICFILES_STORAGE = 's3utils.StaticRootS3BotoStorage'
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
     STATIC_URL = S3_URL + '/static/'
@@ -114,7 +114,6 @@ if not DEBUG:
     DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
     THUMBNAIL_DEFAULT_STORAGE = 's3utils.MediaRootS3BotoStorage'
     MEDIA_URL = S3_URL + '/media/'
-    ADMIN_MEDIA_PREFIX = 'https://%s.s3.amazonaws.com/static/admin/' % AWS_STORAGE_BUCKET_NAME
 
 
 # Easy-thumbnail configuration

@@ -7,5 +7,5 @@ class FixedS3BotoStorage(S3BotoStorage):
 			url += '/'
 		return url
 
-StaticRootS3BotoStorage = lambda: FixedS3BotoStorage(location='static')
-MediaRootS3BotoStorage  = lambda: FixedS3BotoStorage(location='media')
+StaticRootS3BotoStorage = lambda: S3BotoStorage(location='static')
+MediaRootS3BotoStorage  = lambda: S3BotoStorage(location='media')
