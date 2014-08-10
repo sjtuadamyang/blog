@@ -105,6 +105,7 @@ STATIC_URL = '/static/'
 # Static asset configuration using S3 in production
 if not DEBUG:
     AWS_STORAGE_BUCKET_NAME = 'adamyang_personal_blog'
+    AWS_QUERYSTRING_AUTH = False
     STATICFILES_STORAGE = 's3utils.StaticRootS3BotoStorage'
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
     STATIC_URL = S3_URL + '/static/'
