@@ -95,6 +95,7 @@ ALLOWED_HOSTS = ['*']
 
 # Media asset configuration
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL needs to be the same as the MEDIA_ROOT prefix so that in DEBUG mode, the media url can be served.
 MEDIA_URL = '/media/'
 
 # Static asset configuration
@@ -112,7 +113,7 @@ if not DEBUG:
     DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
     THUMBNAIL_DEFAULT_STORAGE = 's3utils.MediaRootS3BotoStorage'
     MEDIA_URL = S3_URL + '/media/'
-
+    ADMIN_MEDIA_PREFIX = 'https://%s.s3.amazonaws.com/static/admin/' % AWS_STORAGE_BUCKET_NAME
 
 
 # Easy-thumbnail configuration
