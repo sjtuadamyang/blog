@@ -22,7 +22,7 @@ class Post(models.Model):
 	link_address = models.CharField(max_length=255, blank=True)
 
 	# Provide customized validation
-	""" waiting for django 1.7
+	""" waiting for django 1.7 release or TODO: adamyang, try dev version
 	def clean(self):
 		print "I'm here"
 		# Normal blog type requires valid image, content and preview

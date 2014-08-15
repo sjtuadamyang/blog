@@ -225,7 +225,7 @@
 												<img src="{{ post.image|thumbnail_url:'standard' }}" class="img-responsive" alt=""/>
 											</div>
 											<div class="col-md-7">
-												<h3><a href="./article">{{ post.title }}</a></h3>
+												<h3><a href="/blog/article?article_id={{ post.id }}" class="nivo-lbox" data-lightbox-type="iframe" target="_blank">{{ post.title }}</a></h3>
 												<div class="post-meta">
 													<i class="fa fa-calendar"></i> <a href="#">{{ post.date|date:"d F" }}</a> 
 													<i class="fa fa-user"></i> <a href="#">Admin</a> 
@@ -250,7 +250,7 @@
 										<div class="row">
 											<div class="col-md-12">
 												<i class="fa fa-link"></i>
-												<a href="{{ post.link_address }}" target="_blank">{{ post.link_address }}</a>
+												<a href="{{ post.link_address }}" class="nivo-lbox" data-lightbox-type="iframe" target="_blank">{{ post.link_address }}</a>
 											</div>
 										</div>
 									</div>

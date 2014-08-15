@@ -1,26 +1,20 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from blog import models
+from django import shortcuts
 
 def index(request):
 	posts = models.Post.objects.all()
-
-	template = loader.get_template('blog/index.html')
-	context = RequestContext(request, {'posts': posts})
-	return HttpResponse(template.render(context))
+	context = {'posts': posts}
+	return shortcuts.render(request, 'blog/index.html', context)
 
 def article(request):
-	post_0 = models.Post.objects.all()[0]
-	print post_0.image.url
-	template = loader.get_template('blog/article.html')
-	context = RequestContext(request, {'image': post_0.image,
-									   'content': 'crap'})
-	return HttpResponse(template.render(context))
+	article_id = int(request.GET.get('article_id'))
+	post = models.Post.objects.get(id=article_id)
+	context = {'post': post}
+	return shortcuts.render(request, 'blog/article_partial.html', context)
 
 def frame(request):
 	posts = models.Post.objects.all()
-
-	template = loader.get_template('blog/frame.html')
-	context = RequestContext(request, {'posts': posts})
-	return HttpResponse(template.render(context))
+	context = {'posts': posts}
+	return shortcuts.render(request, 'blog/frame.html', context)
