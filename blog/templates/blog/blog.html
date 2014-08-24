@@ -1,0 +1,52 @@
+{% load staticfiles %}
+{% load thumbnail %}
+<div class="item blog" id="4">
+	<div class="page-head">
+		<div class="row">
+			<div class="col-md-5">
+				<h3>Blog</h3>
+			</div>
+		</div>
+	</div>
+	<div class="blog-wrap">
+		{% for post in posts %}
+		{% if post.blog_type == post.NORMAL %}
+		<article>
+			<div class="row">
+				<div class="col-md-5">
+					<img src="{{ post.image|thumbnail_url:'standard' }}" class="img-responsive" alt=""/>
+				</div>
+				<div class="col-md-7">
+					<h3><a href="#" class="post" id="{{ post.id }}">{{ post.title }}</a></h3>
+					<div class="post-meta">
+						<i class="fa fa-calendar"></i> <a href="#">{{ post.date|date:"d F" }}</a> 
+						<i class="fa fa-user"></i> <a href="#">Admin</a> 
+					</div>
+					<p>{{ post.preview }}</p>
+				</div>
+			</div>
+		</article>
+		{% elif post.blog_type == post.QUOTE %}
+		<div class="quote-post">
+			<div class="row">
+				<div class="col-md-12">
+					<blockquote>{{ post.content }}
+					</blockquote>
+					<i class="fa fa-quote-left"></i>
+					<span class="author-name">{{ post.author_name }}</span>
+				</div>
+			</div>
+		</div>
+		{% elif post.blog_type == post.LINK %}
+		<div class="link-post">
+			<div class="row">
+				<div class="col-md-12">
+					<i class="fa fa-link"></i>
+					<a href="{{ post.link_address }}" class="nivo-lbox" data-lightbox-type="iframe" target="_blank">{{ post.link_address }}</a>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>

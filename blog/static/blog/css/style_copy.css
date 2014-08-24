@@ -126,7 +126,7 @@ a:hover {
 	border-bottom: none;
 }
 
-.navigation li a {
+.navigation li span {
 	padding: 23.7px 25px;
 	display: table;
 	width: 100%;
@@ -136,7 +136,7 @@ a:hover {
 	position: relative;
 }
 
-.navigation li a i {
+.navigation li span i {
 	font-size: 20px;
 	position: relative;
 	top: 1px;
@@ -144,7 +144,7 @@ a:hover {
 	color: #d1d1d1;
 }
 
-.navigation li a:hover, .navigation li a:hover i, .flex-active a, .flex-active a i {
+.navigation li span:hover, .navigation li span:hover i, .flex-active span, .flex-active span i {
 	color: #2c383c !important;
 }
 

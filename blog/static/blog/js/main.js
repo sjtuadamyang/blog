@@ -24,7 +24,7 @@ $(window).load(function() {
 });
 
 /* Mixitup Portfolio */
-jQuery(document).ready(function($) {
+$(document).ready(function() {
   "use strict";
 	$('#portfolio').mixitup({
 		targetSelector: '.item',
@@ -33,13 +33,13 @@ jQuery(document).ready(function($) {
 });
 
 /* Nivo - Lightbox */
-jQuery(document).ready(function($) {
+$(document).ready(function() {
   "use strict";
     $('.nivo-lbox').nivoLightbox({ effect: 'fade' });
 });
 
 /* Skills */
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 	"use strict";
 	$('.skills-info').appear(function() {
 	$('.skill1').css('width', '71%');
@@ -92,4 +92,5 @@ $(function () {
         icon: "/static/blog/images/marker.png"
       });
 });
+
 
