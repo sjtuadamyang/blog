@@ -5,12 +5,6 @@ $(window).load(function() {
     	$("#mask").delay(1000).fadeOut("slow");
     });
 
-/* Nivo - Lightbox */
-$(document).ready(function() {
-  "use strict";
-    $('.nivo-lbox').nivoLightbox({ effect: 'fade' });
-});
-
 /* Load content */
 $('.navigation > li').click(function(){
   $('.flex-active').removeClass('flex-active');
@@ -19,6 +13,7 @@ $('.navigation > li').click(function(){
     // Load js for google map
     "use strict";
     if ($('.content > div').attr('id') == '4') {
+      $('.nivo-lbox').nivoLightbox({ effect: 'fade' });
       $('.post').click(function(){
         $('.content').load("/blog/article/" + $(this).attr('id')) 
       })
