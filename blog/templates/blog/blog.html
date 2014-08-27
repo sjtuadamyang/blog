@@ -17,7 +17,7 @@
 					<img src="{{ post.image|thumbnail_url:'standard' }}" class="img-responsive" alt=""/>
 				</div>
 				<div class="col-md-7">
-					<h3><a href="#" class="post" id="{{ post.id }}">{{ post.title }}</a></h3>
+					<h3><span class="post clickable" id="{{ post.id }}">{{ post.title }}</span></h3>
 					<div class="post-meta">
 						<i class="fa fa-calendar"></i> <a href="#">{{ post.date|date:"d F" }}</a> 
 						<i class="fa fa-user"></i> <a href="#">Admin</a> 

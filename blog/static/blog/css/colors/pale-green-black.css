@@ -2,6 +2,11 @@ a:hover {
 	color:#64e294;
 }
 
+span.clickable:hover {
+	cursor:pointer;
+	color:#64e294;
+}
+
 .navigation li:before {
 content:'';
 background:#64e294;

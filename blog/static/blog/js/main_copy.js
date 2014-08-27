@@ -60,7 +60,7 @@ $('.navigation > li').click(function(){
       map.addMarker({
         lat: 37.4047456,
         lng: -122.0071204,
-        icon: "/static/blog/images/marker.png"
+        icon: $('#marker').attr('href')
       });
     }
   })

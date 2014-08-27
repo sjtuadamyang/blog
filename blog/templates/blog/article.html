@@ -11,15 +11,12 @@
 	<div class="blog-wrap">
 		<article>
 			<div class="row">
-				<div class="col-md-12 blog-single-img">
-					<img src="{{ post.image|thumbnail_url:'standard' }}" class="img-responsive" alt=""/>
-				</div>
 				<div class="col-md-12">
 					<h3>{{ post.title }}</h3>
 					<div class="post-meta">
 						<i class="fa fa-calendar"></i> <a href="#">{{ post.date|date:"d F" }}</a>
 					</div>
-					{{ post.preview }}
+					{{ post.content }}
 				</div>
 			</div>
 		</article>
