@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'yyi0u+61@57@qa3z@r3*^ykqnc!v(l&8z+9c1598*l!teu25+d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -112,8 +112,8 @@ if not DEBUG:
     DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
     THUMBNAIL_DEFAULT_STORAGE = 's3utils.MediaRootS3BotoStorage'
     MEDIA_URL = S3_URL + '/media/'
-    AWS_ACCESS_KEY_ID = 'AKIAJ6YCKMCWNAWHS4ZA'
-    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_ACCESS_KEY_ID = 'AKIAI75UNDXXRHB6FGOA'
+    AWS_SECRET_ACCESS_KEY = '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'
 
 
 # Easy-thumbnail configuration
