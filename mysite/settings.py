@@ -112,6 +112,8 @@ if not DEBUG:
     DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
     THUMBNAIL_DEFAULT_STORAGE = 's3utils.MediaRootS3BotoStorage'
     MEDIA_URL = S3_URL + '/media/'
+    AWS_ACCESS_KEY_ID = 'AKIAI75UNDXXRHB6FGOA'
+    AWS_SECRET_ACCESS_KEY = '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'
 
 
 
