@@ -112,7 +112,8 @@ if not DEBUG:
     DEFAULT_FILE_STORAGE = 's3utils.MediaRootS3BotoStorage'
     THUMBNAIL_DEFAULT_STORAGE = 's3utils.MediaRootS3BotoStorage'
     MEDIA_URL = S3_URL + '/media/'
-
+    # S3 key is removed since github is public visible
+    # Paste is back before push to heroku
 
 # Easy-thumbnail configuration
 THUMBNAIL_DEBUG = True
