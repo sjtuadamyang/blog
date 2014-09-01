@@ -17,8 +17,13 @@ $('.navigation > li').click(function(){
       if ($('.content > div').attr('id') == '4') {
         $('.nivo-lbox').nivoLightbox({ effect: 'fade' });
         $('.post').click(function(){
-          $('.content').load("/blog/article/" + $(this).attr('id')) 
-        })
+          var clickPost = $(this);
+          $('.content').fadeOut('fast', function() {
+            $('.content').load("/blog/article/" + clickPost.attr('id'), function(){
+              $('.content').fadeIn('fast');
+            }) 
+          });
+        });
       }
       $('.content').fadeIn('fast', function() {
         if ($('.content > div').attr('id') == '5') {

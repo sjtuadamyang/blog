@@ -74,7 +74,7 @@ a:hover {
 
 .l-content {
 	background: #000;
-	height: 555px;
+	height: 482px;
 	width: 27.7%;
 	padding: 0px;
 }
@@ -332,6 +332,10 @@ a:hover {
 	font-weight: 400;
 	background: #f6f6f6;
 	border-left: 1px solid #ededed;
+}
+
+.personal-info li span i {
+	font-size: 22px;
 }
 
 /*-------------------------------------------- 
@@ -1161,7 +1165,7 @@ footer p {
 
 .navigation li {
 	float: left;
-	width: 25%;
+	width: 33.3%;
 }
 
 .navigation li span {

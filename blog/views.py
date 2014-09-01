@@ -39,3 +39,6 @@ def frame(request):
 def base(request):
 	return shortcuts.render(request, 'blog/base.html', {})
 
+def simplev(request):
+	return shortcuts.render(request, 'blog/simplev.html', {})
+
